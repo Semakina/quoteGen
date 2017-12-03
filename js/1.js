@@ -15,7 +15,7 @@ var pic = document.getElementById("pic"),
 
 function getQuote(){
 		$.ajax({
-		url: 'http://api.forismatic.com/api/1.0/',  
+		url: 'https://api.forismatic.com/api/1.0/',  
 		dataType : "jsonp", 
 		data: "method=getQuote&format=jsonp&lang=ru&jsonp=?",
 		success: function (data) { 
@@ -25,14 +25,9 @@ function getQuote(){
 }
 function getPic(){
 	img.src = "https://placeimg.com/"+pic.width+"/"+pic.height+"/any?" + Math.floor(Math.random() * (100000));
-		console.log(img.src);
 	img.onload = function(){
-		console.log("onload");
-		console.log("clear");
 	ctx.drawImage(img, 0, 20, pic.width, pic.height); 
-		console.log("draw");
 	cropText(text, pic.width);
-		console.log("crop");
 	}
 } 
 				getQuote();
