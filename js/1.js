@@ -1,12 +1,12 @@
 var text;
 var pic = document.getElementById("pic"),
 			    ctx = pic.getContext('2d');
-			    pic.width = 550;
-			    pic.height = 550;
+			    pic.width = 700;
+			    pic.height = 800;
   
 	var img = new Image();
 				ctx.fillStyle = "#fff";
-				ctx.font = 'bold 35px Century Gothic';
+				ctx.font = 'bold 40px Century Gothic';
 				ctx.shadowColor = "#000";
    		 		ctx.shadowOffsetX = 2;
     			ctx.shadowOffsetY = 1;
@@ -39,7 +39,7 @@ $('#but').click(function(){
 });
 
 function cropText(text, width){
-	var lineHeight = 60;
+	var lineHeight = 80;
 	var marginTop = 90;
 	var words = text.split(" ");
         var count = words.length;
