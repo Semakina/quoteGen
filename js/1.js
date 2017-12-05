@@ -26,7 +26,7 @@ function getQuote(){
 function getPic(){
 	img.src = "https://placeimg.com/"+pic.width+"/"+pic.height+"/any?" + Math.floor(Math.random() * (100000));
 	img.onload = function(){
-	ctx.drawImage(img, 0, 20, pic.width, pic.height); 
+	ctx.drawImage(img, 0, 0, pic.width, pic.height); 
 	cropText(text, pic.width);
 	}
 } 
